@@ -12,7 +12,8 @@ sudo apt-get install -y libcapstone3 libcapstone-dev
 sudo apt-get install -y libgtk-3.0 xorg libffi-dev
 
 # 2) Fetch and install avatar
-git clone --branch bar18_avatar2 https://github.com/avatartwo/avatar2.git
+#git clone --branch bar18_avatar2 https://github.com/avatartwo/avatar2.git
+git clone --branch bar18_avatar2 https://github.com/SamAicardi/avatar2.git
 sudo pip2 install avatar2/
 sudo pip3 install avatar2/
 
@@ -23,7 +24,8 @@ sudo cp /usr/local/lib/python3.5/dist-packages/usr/lib/python3/dist-packages/key
         /usr/local/lib/python3.5/dist-packages/keystone
 
 # 3) build the endpoints
-./avatar2/targets/build_panda.sh
+#./avatar2/targets/build_panda.sh
+./avatar2/targets/build_panda.sh build-get-llvm
 #./avatar2/targets/build_qemu.sh # QEMU is not needed for this examples - let's skip it here
 sudo pip2 install angr
 sudo apt-get install -y openocd
@@ -31,6 +33,6 @@ sudo apt-get install -y openocd
 # 4) download and unpack, or build firefox for the second example.
 #/vagrant/02_firefox/build_firefox.sh 
 
-wget http://www.s3.eurecom.fr/~muench/data/firefox-52.0.en-US.linux-x86_64.tar.bz2 -P /vagrant/02_firefox/
-tar -xvf /vagrant/02_firefox/firefox-52.0.en-US.linux-x86_64.tar.bz2 -C /home/vagrant/
-ln -s  /home/vagrant/firefox/firefox-bin /vagrant/02_firefox/firefox
+#wget http://www.s3.eurecom.fr/~muench/data/firefox-52.0.en-US.linux-x86_64.tar.bz2 -P /vagrant/02_firefox/
+#tar -xvf /vagrant/02_firefox/firefox-52.0.en-US.linux-x86_64.tar.bz2 -C /home/vagrant/
+#ln -s  /home/vagrant/firefox/firefox-bin /vagrant/02_firefox/firefox
