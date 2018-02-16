@@ -14,7 +14,8 @@ Vagrant.configure("2") do |config|
   # boxes at https://vagrantcloud.com/search.
     config.vm.box = "bento/ubuntu-16.04" # the ubuntu/xenial64 box misses the
                                          # cdc_acm kernel module ...
-    config.vm.provision :shell, path: "bootstrap.sh", privileged: false
+    # TODO: uncomment the following line
+    #config.vm.provision :shell, path: "bootstrap.sh", privileged: false
 
 
   # Disable automatic box update checking. If you disable this, then
