@@ -1,5 +1,5 @@
 # 0) Let's move the examples to /home/vagrant
-cp -r 01_harvey 02_firefox 03_panda_rr /home/vagrant
+cp -r /vagrant/01_harvey /vagrant/02_firefox /vagrant/03_panda_rr /home/vagrant
 
 
 # 1) Install general dependencies
