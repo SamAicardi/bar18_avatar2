@@ -33,7 +33,7 @@ sudo apt-get install subversion
 sudo apt-get install libglib2.0-dev zlib1g-dev
 
 # 3) build the endpoints
-./avatar2/targets/build_panda.sh build-get-llvm
+sudo ./avatar2/targets/build_panda.sh build-get-llvm
 #./avatar2/targets/build_qemu.sh # QEMU is not needed for this examples - let's skip it here
 sudo pip2 install angr
 sudo apt-get install -y openocd
