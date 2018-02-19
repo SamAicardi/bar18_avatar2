@@ -28,7 +28,9 @@ sudo cp /usr/local/lib/python2.7/dist-packages/usr/lib/python2.7/dist-packages/k
 sudo cp /usr/local/lib/python3.5/dist-packages/usr/lib/python3/dist-packages/keystone/libkeystone.so \
         /usr/local/lib/python3.5/dist-packages/keystone
 
+# necessary to build llvm
 sudo apt-get install subversion
+sudo apt-get install libglib2.0-dev zlib1g-dev
 
 # 3) build the endpoints
 ./avatar2/targets/build_panda.sh build-get-llvm
