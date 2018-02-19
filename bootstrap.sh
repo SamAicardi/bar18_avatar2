@@ -17,7 +17,7 @@ cd /home/vagrant
 
 # 2) Fetch and install avatar
 #git clone --branch bar18_avatar2 https://github.com/avatartwo/avatar2.git
-git clone --branch dev/main https://github.com/SamAicardi/avatar2.git
+git clone --branch dev-vagrant https://github.com/SamAicardi/avatar2.git
 sudo pip2 install avatar2/
 sudo pip3 install avatar2/
 
