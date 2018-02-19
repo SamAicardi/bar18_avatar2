@@ -29,12 +29,17 @@ sudo cp /usr/local/lib/python3.5/dist-packages/usr/lib/python3/dist-packages/key
         /usr/local/lib/python3.5/dist-packages/keystone
 
 # necessary to build llvm
-sudo apt-get install subversion
-sudo apt-get install libglib2.0-dev zlib1g-dev
+sudo apt-get install -y subversion
+sudo apt-get install -y libglib2.0-dev zlib1g-dev
 
 # 3) build the endpoints
 sudo ./avatar2/targets/build_panda.sh build-get-llvm
 #./avatar2/targets/build_qemu.sh # QEMU is not needed for this examples - let's skip it here
+cd ./avatar2/targets/src/avatar-panda
+./configure --disable-sdl --target-list=arm-softmmu --enable-llvm --with-llvm=/usr/local
+make -j4
+
+
 sudo pip2 install angr
 sudo apt-get install -y openocd
 
