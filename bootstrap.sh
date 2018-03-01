@@ -26,6 +26,7 @@ sudo apt-get install -y xauth
 sudo apt-get install -y xorg
 sudo apt-get install -y openbox
 
+
 #==============================================
 #     Fetch and install avatar2
 #==============================================
@@ -52,12 +53,20 @@ sudo cp /usr/local/lib/python3.5/dist-packages/usr/lib/python3/dist-packages/key
         /usr/local/lib/python3.5/dist-packages/keystone
 
 
-
 #==============================================
 #     Build the endpoints
 #==============================================
 ./avatar2/targets/build_panda.sh build-get-llvm
 #./avatar2/targets/build_qemu.sh # QEMU is not needed for this examples - let's skip it here
+
+
+#==============================================
+#     Prepare the environment for testing
+#==============================================
+mkdir /home/vagrant/.panda
+cd /home/vagrant/.panda
+wget https://people.debian.org/~aurel32/qemu/i386/debian_wheezy_i386_standard.qcow2
+cd /home/vagrant
 
 
 #==============================================
